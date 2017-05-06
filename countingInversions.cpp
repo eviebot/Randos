@@ -64,21 +64,18 @@ vector <int> mergeSort(vector <int> & x, int beg, int en)
 }
 int main()
 {
-    /*ofstream file;
+    ofstream file;
     file.open("output.txt");
     ifstream infile;
-    infile.open("input.txt");*/
+    infile.open("countinversions.txt");
 
-    //ios::sync_with_stdio(false);cin.tie(0);cout.tie(0);
+    infile::sync_with_stdio(false);infile.tie(0);cout.tie(0);
 
     vector <int> myvec, a, b, c;
     int i;
-    cout << "Enter a buncha numbers..enter -1 to exit\n";
-    while(true)
+    for(int j = 1; j <= 100000; ++j)
     {
-        cin >> i;
-        if(i==-1)
-            break;
+        infile >> i;
         myvec.pb(i);
     }
 
