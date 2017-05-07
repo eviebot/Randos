@@ -43,7 +43,7 @@ long long int min_cut(vector <pair <vector<int>, vector <int>>> & vec)
 {
     vector < pair <vector <int>, vector <int> > > graph = vec;
     vector <int> a, b, c;
-    srand(time(NULL));
+
     int floor, ceil = graph.size(), ran1, ran2, i, j, k, l;
     bool flag;
     long long int mini = 0;
@@ -149,6 +149,7 @@ int main()
         graph.pb( MP( a, b ) );
     }
     long long int cut_min = 100000, t;
+    srand(time(NULL));
     for(int j = 0; j < 100000; ++j)
     {
         t = min_cut(graph);
@@ -157,7 +158,6 @@ int main()
             cut_min = t;
         }
         cout << j<<" "<< t<<" "<< cut_min<<"\n";
-        Sleep(200);
     }
 
     cout << cut_min << "\n";
